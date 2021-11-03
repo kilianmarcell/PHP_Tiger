@@ -4,8 +4,20 @@ require_once "db.php";
 require "../vendor/autoload.php";
 
 use Marcell\Tiger\Tigris;
+use Marcell\Tiger\Kiiratas;
 
-$lista = Tigris::beolvas();
+use Dompdf\Dompdf;
+
+$kiiratas = new Kiiratas();
+
+$dompdf = new Dompdf();
+//TODO: $kiiratas -> kiir()
+$dompdf->loadHtml($kiiratas -> kiir());
+
+$dompdf->setPaper('A4', 'landscape');
+
+$dompdf->render();
+$dompdf->stream();
 
 ?><!DOCTYPE html>
 <html lang="en">
