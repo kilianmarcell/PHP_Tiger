@@ -1,0 +1,11 @@
+{
+    "name": "marcell/tiger",
+    "description": "Tigrises feladat",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Marcell\\Tiger\\": "src/"
+        }
+    },
+    "require": {}
+}
