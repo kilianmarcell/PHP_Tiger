@@ -5,6 +5,8 @@ require "../vendor/autoload.php";
 
 use Marcell\Tiger\Tigris;
 
+$lista = Tigris::beolvas();
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +16,14 @@ use Marcell\Tiger\Tigris;
     <title>Kilián Marcell Seholnincs Állatkert</title>
 </head>
 <body>
-    
+    <div>
+        <?php
+
+            foreach ($lista as $i) {
+                echo $i -> getId() . " " . $i -> getNev() . " " . $i -> getTulaj_nev() . " " . $i -> getOrokbefogadas_datum() -> format('Y-m-d') . "<br>";
+            }
+
+        ?>
+    </div>
 </body>
 </html>
