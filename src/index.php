@@ -3,6 +3,8 @@
 require_once "db.php";
 require "../vendor/autoload.php";
 
+use Marcell\Tiger\Tigris;
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
